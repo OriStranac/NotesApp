@@ -65,21 +65,19 @@ const formTitle = computed(() => (register.value ? "Register" : "Login"));
 const onSubmit = () => {
   if (!credentials.email || !credentials.password) {
     alert("Please fill in all fields");
-  }
-   else {
+  } else {
     if (register.value) {
-        storeAuth.registerUser(credentials);
+      storeAuth.registerUser(credentials);
     } else {
-        storeAuth.loginUser(credentials);
+      storeAuth.loginUser(credentials);
     }
-   }
-
+  }
 };
 
-  const credentials = reactive({
-    email: '',
-    password: '',
-  });
+const credentials = reactive({
+  email: "",
+  password: "",
+});
 </script>
 
 <style>
