@@ -1,5 +1,5 @@
 export const vAutoFocus = {
     mounted(el) {
-      el.focus();
+        el.focus();
     },
-  };
+};

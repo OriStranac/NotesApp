@@ -24,13 +24,13 @@
       v-if="modals.deleteNote"
       v-model="modals.deleteNote"
       :noteId="note.id"
-     />
+    />
   </div>
 </template>
 
 <script setup>
 import { computed, reactive } from "vue";
-import { useDateFormat} from '@vueuse/core';
+import { useDateFormat } from "@vueuse/core";
 import { useNotesStore } from "@/stores/storeNotes";
 import ModalDeleteNote from "@/components/Notes/ModalDeleteNote.vue";
 
@@ -51,11 +51,10 @@ const storeNotes = useNotesStore();
 
 const dateFormatted = computed(() => {
   let date = new Date(parseInt(props.note.date));
-  return useDateFormat(date, 'MM-DD-YYYY @ HH:mm:ss');
+  return useDateFormat(date, "MM-DD-YYYY @ HH:mm:ss");
 });
 
 const modals = reactive({
   deleteNote: false,
 });
-
 </script>
