@@ -24,7 +24,7 @@
                 v-model="credentials.email"
                 class="input"
                 type="email"
-                placeholder="e.g. alexsmith@gmail.com"
+                placeholder="e.g. hamzahamzic@gmail.com"
               />
             </div>
           </div>
